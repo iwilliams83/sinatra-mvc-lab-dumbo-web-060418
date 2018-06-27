@@ -8,12 +8,7 @@ class App < Sinatra::Base
   post '/piglatinize' do
     phrase = params[:user_phrase]
     translator = PigLatinizer.new
-    if phrase.include?(" ")
-      @piglatin = translator.piglatinize_sentence(phrase)
-    else
-      @piglatin = translator.piglatinize_word(phrase)
-    end
-    @piglatin
+    @piglatin = translator.piglatinize(phrase)
     erb :translated
   end
 
