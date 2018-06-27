@@ -10,9 +10,11 @@ class App < Sinatra::Base
     translator = PigLatinizer.new
     if phrase.include?(" ")
       @piglatin = translator.piglatinize_sentence(phrase)
-    else 
+    else
       @piglatin = translator.piglatinize_word(phrase)
     end
-    @piglatin 
+    @piglatin
   end
+
+  erb :translated
 end
