@@ -14,7 +14,7 @@ class App < Sinatra::Base
       @piglatin = translator.piglatinize_word(phrase)
     end
     @piglatin
+    erb :translated
   end
 
-  erb :translated
 end
