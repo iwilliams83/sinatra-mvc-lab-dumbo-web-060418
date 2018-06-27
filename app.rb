@@ -6,6 +6,6 @@ class App < Sinatra::Base
   end
 
   post '/piglatinize' do
-    "i'm in the post"
+    phrase = 
   end
 end
